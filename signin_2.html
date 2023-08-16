@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            outline: none!important;
+        }
+        body{
+            margin: 0; padding: 0;
+            font-family: sans-serif;
+        }
+        .login-page{
+            background-image: url(images/bkg2.jpg);
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+        /* optional */
+        .login-page::after{
+            content: '';
+            position: absolute;
+            left: 0px; top: 0px;
+            height: 100%; width: 100%;
+            background-color: rgba(0,0,0,.5);
+            z-index: -1;
+        }
+        .login-page .box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            /* to monitor the box content size */
+            /* background: black; */
+            width: 350px;
+            border-radius: 30px;
+        }
+        .login-page .box .form-head h2{
+            text-align: center;
+            margin: 10px 0px 20px;
+            color: #ffffff;
+        }
+        .login-page .box .form-body{
+            display: flex;
+            flex-direction: column;
+        }
+        .login-page .box .form-body input{
+            height: 40px;
+            margin-bottom: 20px;
+            border: 1px solid #ffffff;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+        .login-page .box .form-body input::placeholder{
+            color: white;
+        }
+        .login-page .box .form-body input:focus{
+            box-shadow: 0px 0px 10px black;            
+        }
+        .login-page .box .form-footer{
+            text-align: center;
+        }
+        .login-page .box .form-footer button{
+            height: 40px;
+            border-radius: 20px;
+            padding: 0px 50px;
+            color: white;
+            background-color: red;
+            border: none;    
+            cursor: pointer;                  
+        }
+        .login-page .box .form-footer button:hover{
+            box-shadow: 0px 0px 10px white;
+            background: green;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section class="login-page">
+        <form action="">
+            <div class="box">
+                <div class="form-head">
+                    <h2>Student Login</h2>
+                </div>
+
+                <div class="form-body">
+                    <input type="text" placeholder="username">
+                    <input type="password" placeholder="password">
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit">Login</button>
+                </div>
+
+            </div>
+        </form>
+    </section>
+    
+</body>
+</html>
