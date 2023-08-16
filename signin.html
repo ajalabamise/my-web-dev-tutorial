@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+
+    <style>
+        *{
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;            
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* background: gray; */
+        }
+
+        /* helps to position the div boxsignin */
+        .boxsignin{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+             background: rgba(8, 8, 8);          
+        }
+
+        .boxsignin form{
+            position: relative;   
+            width: 100%;         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;    /* it does the job of <br> element */
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        .boxsignin form h2{
+            color: white;
+            font-weight: 600;
+        }
+
+        .boxsignin form input{
+            position: relative;
+            width: 85%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;     /* this increases the size of the box */
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+        }
+
+        .boxsignin form input::placeholder{
+            /* background: rgba(255, 255, 255, 0.4); */  
+            color: #fff;         
+
+        }
+
+        .boxsignin form input[type="submit"]{
+            font-weight: 600;
+            background: white;
+            color: black;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .boxsignin form input[type="submit"]:hover{
+            background: green;
+        }
+
+        .boxsignin form .group{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .boxsignin form .group a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .boxsignin form .group a:last-child{
+            color: #5ebdc4;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- the box for the sign up form -->
+    <div class="boxsignin">
+        <form action="">
+            <h2>Student Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Login">
+
+            <div class="group">
+                <a href="#">Forget Password</a>
+                <a href="#">Sign Up</a>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>

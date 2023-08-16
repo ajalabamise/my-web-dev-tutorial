@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <title>dmac portfolio</title>
+
+    <style>
+        :root{
+            --primarycolor: #0076de;
+            --white: #fff;
+            --black: #333;
+            --deepblack: #000;
+            --grey: #f6f8fa;
+            --labelcolor: #64b1f5;
+            --yellow: #ffd723;
+        }
+        *{
+            margin: 0; padding: 0;
+            outline: none;
+            font-family: sans-serif;
+        }
+        /* body{
+            width: 100%;
+            height: auto;
+        } */
+       
+        /* make nav bar straight */
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(images/bkg3.jpg);
+            background-position: center;
+            background-size: cover;
+            /* adjust space on the left and right on the webpage */
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+
+        }
+        .navbar{
+            height: 12%;
+            display: flex;
+            align-items: center;
+        }
+        /* change logo size */
+        .logo{
+            width: 50px;
+            cursor: pointer;
+        }
+        /* hamburger icon */
+        .menu-icon{
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }  
+        /* style nav links */
+        nav{
+            flex: 1;
+            text-align: right;
+
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        /* style row --container */
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+        /* style left column */
+        .col{
+            /* resize the text into smaller box */
+            flex-basis: 50%;
+        }
+        h1{
+            color: var(--white);
+            font-size: 100px;
+        }
+        p{
+            color: var(--white);
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 15px;            
+        }
+       
+        button{
+            width: 180px;
+            color: var(--deepblack);
+            font-size: 13px;
+            padding: 12px 0;
+            background: var(--white);
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+        }
+        /* set the height and width for the card */
+        .card{
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 12px;
+            padding: 12px 15px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-image: url(images/bkg2.jpg);
+            background-position: center;
+            background-size: cover;
+            transition: transform .5s;
+        }
+        /* the extra card1 will help us make image for each information */
+        .card1{
+            background-image: url(images/bkg1.jpg);
+        }
+        .card2{
+            background-image: url(images/bkg4.png);
+        }
+        .card3{
+            background-image: url(images/bkg5.jpg);
+        }
+        .card4{
+            background-image: url(images/bkg1.jpg);
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        h5{
+            color: var(--primarycolor);
+            text-shadow: 0 0 2px red;
+            font-size: 16px;
+        }
+        .card p{
+            text-shadow: 0 0 12px #000;
+            font-size: 13px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+       <div class="container">
+            <div class="navbar">
+                <img src="images/location.png" alt="" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+                <img src="images/location.png" alt="" class="menu-icon">
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <h1>Tutoring</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio consectetur! Earum rerum accusantium, 
+                        cum aliquam eos odio eius impedit quos praesentium, sit unde illo ipsa, atque reprehenderit voluptatibus error.</p>
+                        <button type="button">Explore</button>
+                </div>
+
+                <div class="col">
+
+                    <div class="card card1">
+                        <h5>Mathematics</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio consectetur! Earum rerum accusantium, 
+                            cum aliquam eos odio eius impedit quos praesentium, sit unde illo ipsa, atque reprehenderit voluptatibus error.</p>
+                    </div>
+
+                    <div class="card card2">
+                        <h5>Further Mathematics</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio consectetur! Earum rerum accusantium, 
+                            cum aliquam eos odio eius impedit quos praesentium, sit unde illo ipsa, atque reprehenderit voluptatibus error.</p>
+                    </div>
+
+                    <div class="card card3">
+                        <h5>Machine Learning using Python</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio consectetur! Earum rerum accusantium, 
+                            cum aliquam eos odio eius impedit quos praesentium, sit unde illo ipsa, atque reprehenderit voluptatibus error.</p>
+                    </div>
+
+                    <div class="card card4">
+                        <h5>Web Design</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio consectetur! Earum rerum accusantium, 
+                            cum aliquam eos odio eius impedit quos praesentium, sit unde illo ipsa, atque reprehenderit voluptatibus error.</p>
+                    </div>
+
+                </div>
+            </div>
+            
+       </div>
+    
+</body>
+</html>

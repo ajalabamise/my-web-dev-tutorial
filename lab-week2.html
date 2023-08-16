@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN Website</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*background-image: url(images/bkg1.jpg);*/
+            background: url(images/bkg1.jpg) center / cover;
+        }
+
+        /*style the image between the table data*/
+        td img{
+            width: 25px;
+            height: 25px;
+            margin-right: 0.5rem;   /*create space between image and text*/
+            border-radius: 50%;
+            vertical-align: middle; /*makes the image and text to be aligned (on the same line)*/
+        }
+       /*
+        table{
+            width: 100%;
+        }
+        */
+       
+        /*to style and add space between the table, th and td tags*/
+        table, th, td{
+            padding: 1rem;
+            text-align: left;
+            border-collapse: collapse; /*to remove the default border shape created by the browser*/
+        }
+
+        thead th{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #645785fe;
+        }
+
+        /*different color for data in even position*/
+        tbody tr:nth-child(even){
+            background-color: #0000000b;
+        }
+
+        /*when you over the mouse, it will show white*/
+        tbody tr:hover{
+            background-color: #fff6;
+        }
+
+        /*style main with class name tableinfo*/
+        main.tableinfo{
+            width: 82vw;    /*it repositions the entire heading and table content*/
+            height: 90vh;
+            background-color: #fff5; /*5 represent transparent value*/
+
+            backdrop-filter: blur(7px); /*to make the image blur*/
+            box-shadow: 0 .4rem .8rem #0005; /*x offset, y offset, spread value, border radius*/
+            border-radius: .8rem; /*for the edges of the table*/
+            overflow: hidden;
+        }
+
+        .table-header{
+            width: 100%;
+            height: 10%; /*shifts the tbody from the h2*/
+            background-color: #fff4;
+            padding: .8rem 1rem /*top&bottom, left&right*/
+        }
+
+        .table-body{
+            width: 95%;
+            max-height: 89%;
+            background-color: #fffb;
+
+            margin: .8rem auto; /*to adjust the table in the main box*/
+
+            border-radius: .6rem;
+            overflow: auto; /*if content exceed the main size, it will show scroll bar*/
+        }
+
+        /*to manage the scroll bar*/
+        .table-body::-webkit-scrollbar{
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        .table-body::-webkit-scrollbar-thumb{
+            border-radius: 0.5rem;
+            background-color: #0004;          
+            visibility: hidden; /*hid the scrollbar*/  
+        }
+
+        .table-body:hover::-webkit-scrollbar-thumb{           
+            visibility: visible; /*scrollbar shows upon hovering*/
+        }
+
+        /*different color indicator for different status*/
+        .status{
+            background-color: red;
+            padding: .3rem 0.3rem;  /*y pos, x pos*/
+            border-radius: 2rem;
+            text-align: center;
+        }
+
+        .status.active{
+            background-color: #86e49d;
+            color: #006b21;
+        }
+
+        .status.inactive{
+            background-color: #d893a3;
+            color: #b30021;
+        }
+
+        .status.pending{
+            background-color: #6fcaea;            
+        }
+
+        /*responsive */
+        /*when screen has maximum width of 1000*/
+        @media(max-width:1000px){
+            td:not(:first-of-type){     /*handles the table data*/
+                min-width: 12.1rem;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+   <main class="tableinfo">
+    <section class="table-header">
+        <h1>Player's Information</h1>
+    </section>
+    <section class="table-body">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>club</th>
+                    <th>player</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="images/location.png" width="25" alt="mancity"><strong>Manchester City</strong></td>
+                    <td>Erling Haaland</td>
+                    <td>
+                        <p class="status active">Active</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="images/location.png" width="25" alt="psg"><strong>PSG</strong></td>
+                    <td>Mbappe</td>
+                    <td>
+                        <p class="status pending">Pending</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="images/location.png" width="25" alt="bayern"><strong>Bayern Munich</strong></td>
+                    <td>Leroy Sane</td>
+                    <td>
+                        <p class="status inactive">Inactive</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+   </main>
+    
+</body>
+</html>

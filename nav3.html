@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+@media (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .menu a {
+    color: white;
+  }
+}
+    </style>
+
+</head>
+<body>
+    
+    <!-- nav -->
+    <nav id="nav" class="navbar">
+        <ul class="nav-menu">
+          <li id="current" class="nav-item">
+            <a
+              href="file:///C:/Users/.../index.html"
+              class="nav-link"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/.../about.html"
+              class="nav-link"
+              >About</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        });
+
+        document.querySelector(".nav.link").forEach((n) =>
+        n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        })
+        );
+    </script>
+
+</body>
+</html>
