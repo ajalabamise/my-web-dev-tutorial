@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <title>Document</title>
+
+    <style>
+      *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: #eee;
+      }
+      .title h1{
+        font-size: 50px;
+        color: #222;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .title p{
+        font-size: 20px;
+        color: #8c8c8c;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .service-section{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 75px auto;
+        text-align: center;
+      }
+      .card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .card:hover{
+        background-color: goldenrod;
+        transition: .5s ease;        
+      }
+      .card .icon{
+        font-size: 45px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        color: #009dff;
+      }
+      .card h2{
+        font-size: 22px;
+        color: #222;
+        margin-bottom: 20px;
+      }
+      .card p{
+        font-size: 17px;
+        color: #8c8c8c;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      .button{
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        background-color: red;
+        padding: 11px 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .button:hover{
+        background-color: green;
+        transition: .5s ease;
+      }
+
+      /* mobile version */
+      @media screen and (max-width: 940px) {
+        .service-section{
+            display: flex;
+            flex-direction: column;
+        }
+        /* to create gap among the cards */
+        .card{
+            width: 85%;
+            display: flex;
+            margin: 20px 0px;
+        }
+      }
+
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="title">
+            <h1>Our Services</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem temporibus dicta 
+                reiciendis ab odio, eaque, a nulla sit similique, nisi iste. Excepturi accusamus modi dignissimos illo odit, voluptate fugiat.</p>                
+        </div>
+        <div class="service-section">
+            <!-- create a card for each service  -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-laptop-code"></i>                    
+                </div>
+                <h2>Web Designing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem temporibus dicta 
+                    reiciendis ab odio, eaque, a nulla sit similique, nisi iste. Excepturi accusamus modi dignissimos illo odit, voluptate fugiat.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-tools"></i>                    
+                </div>
+                <h2>Desktop and Laptop Repair</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem temporibus dicta 
+                    reiciendis ab odio, eaque, a nulla sit similique, nisi iste. Excepturi accusamus modi dignissimos illo odit, voluptate fugiat.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-handshake"></i>                    
+                </div>
+                <h2>Help & Support</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem temporibus dicta 
+                    reiciendis ab odio, eaque, a nulla sit similique, nisi iste. Excepturi accusamus modi dignissimos illo odit, voluptate fugiat.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+            
+
+        </div>
+    </section>
+    
+</body>
+</html>
