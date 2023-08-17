@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: grey;
+        }
+        .form{
+            width: 350px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+             backdrop-filter: blur(15px);
+             border: 1px solid orange;
+             border-radius: 10px;
+             align-items: center;
+        }
+        .form h4{
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: white;
+        }
+        .form .login{
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+        }
+        .login input, button{
+            margin: 10px;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+            font-size: 16px;
+        }
+        
+        
+        .login input{
+            background-color: rosybrown;
+            color: white;
+            font-family: poppins;
+            letter-spacing: 1px;
+            /* space to help attach icon */
+            text-indent: 45px;
+            background-image: url(images/user1.jpg);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: 15px;            
+        }        
+        /* to handle password field */
+        .login input:nth-child(2){
+            background-image: url(images/pass1.jpg);
+        }
+        .login input::placeholder{
+            font-size: 14px;
+            color: black;
+        }
+        .login button{
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+            font-family: calibri;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .suggest{
+            width: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: calibri;
+            font-size: 16px;
+            color: white;
+            margin-top: 10px;
+        }
+        .suggest .forgot{
+            color: orange;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+    <div class="form">
+        <h4>Log into your Account</h4>
+        <div class="login">
+            <input type="text" placeholder="username"> 
+            <input type="password" placeholder="password">
+            <button>Login</button>
+        </div>
+        <div class="suggest">
+            <div class="remember">
+                <input type="checkbox" checked>
+                <span>Remember Me</span>
+            </div>
+            <div class="forgot">
+                <span>Forgot Password</span>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
