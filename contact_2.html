@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px; padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .contact{
+            min-height: 100vh;
+            background-color: #e8f0fe;
+            padding: 50px;
+            text-align: center;
+        }
+        .container{
+           max-width: 800px;
+            /*push the box to center  */
+           margin: 0 auto;
+           /* background: yellow; */
+        }
+        .container h2{
+            font-size: 37px;
+            margin-bottom: 41px;
+            color: #333;
+        }
+        .contact-wrapper{
+            display: grid;
+            /* divide single row into two columns */
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        .contact-form{
+            text-align: left;            
+        }
+        .contact-form h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group{
+            /* pushes all input tags at once */
+            /* because we name each tag same class */
+            margin-bottom: 20px;            
+        }
+        input{
+            width: 100%;
+            padding: 12px;
+            border-radius: 9px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        textarea{
+            width: 100%;
+            padding: 12px;
+            border-radius: 9px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #333;
+
+            resize: none;
+        }
+        /* when user click the input element */
+        input:focus,
+        textarea:focus{
+            outline: none;
+            box-shadow: 0 0 8px #bbb;
+        }
+        .contactbtn{
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contactbtn:hover{
+            background-color: green;
+        }
+        /* for right column */
+        .contact-info{
+            text-align: left;
+        }
+        .contact-info h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-info p{
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .contact-info i{
+            color: orange;
+            margin-right: 10px;
+        }
+
+        /* mobile version */
+        @media screen and (max-width: 768px) {
+            .container{
+                padding: 20px;
+            }
+            .contact-wrapper{
+                grid-template-columns: 1fr;                
+        }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="contactbtn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i>
+                        +234 70 3540</p>
+                    <p><i class="fas fa-envelope"></i>
+                        ajalabamise@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>
+                        1, apex avenue, lagos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
